@@ -134,7 +134,7 @@ class PassControlApp(QWidget):
                 if self.rows.count((self.mail.text(),)):
                     print("Сотрудник", self.dfe, "Вошёл")
                 else:
-                    print("Такой почты нет в базе данных")
+                    print("Такого сотрудника нет в базе данных")
                 base.commit()
               
             else:
@@ -148,7 +148,7 @@ class PassControlApp(QWidget):
             if self.rows.count((self.mail.text(),)):
                 print("Сотрудник", self.dfe, "Вошёл")
             else:
-                print("Такой почты нет в базе данных")
+                print("Такого сотрудника нет в базе данных")
 
     def EXIT(self):
         global guests
@@ -257,7 +257,7 @@ class guest_win(QWidget):
             if self.tx-self.tk > 10:
                 print(f"Гость {self.exi} - превысил время посещения на {(self.tx)-(self.tk)-10} секунд, Пожалуйста обратитесь к охраннику")
             if self.tx-self.tk < 10:
-                print(f"Гость {self.exi} находился на территории {(self.tx)-(self.tk)} ")
+                print(f"Гость {self.exi} находился на территории {(self.tx)-(self.tk)} секунд ")
         else:
             print("Такой почты нет в базе данных")
 
